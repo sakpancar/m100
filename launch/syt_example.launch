@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="syt_m100_imu_to_frame" type="imu_to_frame" name="imu_to_frame" output="screen">
+    <remap from="imu_topic" to="dji_sdk/imu" />
+    <param name="stabilized_base_frame" type="string" value="base_link" />
+    <param name="base_frame" type="string" value="m100_frame" />
+  </node>
+</launch>
